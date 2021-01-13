@@ -1,73 +1,65 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Graphback NestJS + Apollo Server with MongoDB Template
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+> NOTE: This is a preview template - we are continuing to enhance it - we welcome your feedback.
 
-## Description
+A template that provides you with an easy setup for your application's backend using NestJS and Apollo server with TypeScript, and MongoDB as the database.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Quickstart Guide
 
-```bash
-$ npm install
-```
+The project has been created using Graphback. Run the project using the following steps:
 
-## Running the app
+1. Install dependencies
+ 
+	```
+	yarn install
+	```
+	Or, if using npm:
+	```
+	npm install
+	```
+	
+2. Inspect your schema in the `datamodel.graphql` file.
+3. Start the server in:
+	- watch mode
+		```
+		yarn start:dev
+		```
+	- development mode
+		```
+		yarn start
+		```
 
-```bash
-# development
-$ npm run start
+	- production mode
+		```
+		yarn start:prod
+		```
 
-# watch mode
-$ npm run start:dev
+	If you're using npm, just replace `yarn` with `npm run`.
 
-# production mode
-$ npm run start:prod
-```
+For more on customizing your Graphback application, check out [the docs](https://graphback.dev/docs/gettingstarted)
 
-## Test
 
-```bash
-# unit tests
-$ npm run test
+## Updating the business model
 
-# e2e tests
-$ npm run test:e2e
+The `model` folder contains a GraphQL schema file named `datamodel.graphql` defining your [business model](https://graphback.dev/docs/model/datamodel). This file can be edited to suit your needs.
 
-# test coverage
-$ npm run test:cov
-```
+After you have made changes to this file, it is necessary to regenerate the Graphback API by restarting the server (ie. reimplementing **Step 3** of the Quickstart Guide mentioned above).
 
-## Support
+After restarting the server, the Graphback API will be regenerated and your latest changes will be reflected in the schema.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
+## Dependencies and Tools
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+The following tools and technologies have been used to create this template:
 
-## License
+- [GraphQL](https://graphql.org/): GraphQL is an open-source data query and manipulation language for APIs which was publically released by Facebook in 2015.
 
-Nest is [MIT licensed](LICENSE).
+- [Apollo Server](https://www.apollographql.com/docs/apollo-server/): Apollo Server provides a way to simplify building the GraphQL server. It can be used with several popular libraries for Node.js like Express, Koa, Hapi. Here we have used it with Express.
+
+- [NestJS](https://nestjs.com/): NestJS is a progressive Node.js framework which is used for building efficient and scalable server-side applications. It uses robust HTTP Server frameworks like Express or Fastify to make building a Node.js server easier by providing a wide range of features.
+
+- [GraphQL Code Generator](https://graphql-code-generator.com/): GraphQL Code Generator is a tool that generates code out of your GraphQL schema by analyzing it.
+
+- [MongoDB](https://www.mongodb.com/): MongoDB is a popular open-source document NoSQL database written in C++.
